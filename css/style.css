@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+/* Setting Font  */
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+/* Global Variables  */
+:root {
+    --lightGreen: #26D381;
+    --lightBlue: #00E1FF;
+    --darkBlue: #2c4755;
+    --greyishBlue: #545B6B;
+    --almostWhite: #E6E6E6;
+    --warmGreen: #10cab7;
+    --darkGrey: #575757;
+}
+
+/* Class for big grey words  */
+.big-grey {
+    color: #DDD;
+    opacity: 0.5;
+    font-size: 10em;
+}
+.p-inside-big-grey {
+    font-size: 1.4em;
+    color: var(--darkGrey);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.column-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Class for paragraphs under them  */
+
+/* Color of icons  */
+i:not(.bars) {
+    color: var(--warmGreen);
+}
+/* Color of bars icon  */
+.bars {
+    color: var(--darkBlue);
+    z-index: 5;
+}
+/* Centering everything  */
+.body {
+    display: flex;
+    flex-direction: column;
+}
+/* Start Header  */
+
+/* Header styles  */
+header {
+    height: 50px;
+    justify-content: flex-end !important;
+    padding: 20px;
+}
+/* Logo size and position  */
+.logo {
+    width: 3%;
+    height: 20px;
+    margin-right: 50%;
+}
+/* styling bars-list div  */
+.bars-list {
+    order: 1;
+    margin-right: 25%;
+    width: 3%;
+    height: 20px;
+}
+/* Hiding the unordered list for now  */
+.hidden-list {
+  visibility: hidden;
+}
+/* Showing it when the div is hovered  */
+.bars-list:hover > .list-container > .hidden-list {
+    visibility: visible;
+    list-style-type: none;
+}
+.bars-list:hover > .bars {
+    margin-top: 100%;
+}
+.bars-list:hover {
+    height: 100px;
+}
+.bars-list:hover > .list-container > .hidden-list > li > a{
+    text-decoration: none;
+    color: var(--warmGreen) ;
+}
+.bars-list:hover > .list-container  {
+    background-color: var(--darkBlue);
+    width: 200px;
+    margin-top: 0;
+    z-index: 3;
+}
+
+/* End Header  */
+
+/* Start Hello Div  */
+/* First div in the page  */
+.hello-container {
+    height: 350px;
+    background-color: #EEE;
+    justify-content: flex-start;
+    text-align: center;
+}
+/* Green Header Styling  */
+.hello-container > h3 {
+    color: var(--warmGreen);
+    font-size: 3em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* Paragraph Styling  */
+.hello-container > p {
+    color: var(--darkBlue);
+}
+
+/* End Hello Div  */
+
+/* Start Three Icons Div  */
+
+/* Second div in the page ( three icons )  */
+.three-icons {
+    height: 300px;
+    margin-top: 0px;
+}
+/* styling each div inside  */
+.three-icons > div {
+    text-align: center;
+    width: calc((100% / 3) - 40px );
+    height: 100%;
+}
+/* styling each header inside each of those divs  */
+.three-icons > div > h3 {
+    color: var(--darkBlue);
+    font-size: 0.9em;
+    font-weight: 800;
+}
+/* styling each icon inside each of those divs  */
+.three-icons > div > i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+/* styling each paragraph .. .. .. .. ..  */
+.three-icons > div > p {
+    font-size: 0.75em;
+    margin: 10px 60px
+}
+/* giving a box shadow to the middle div  */
+.three-icons > .second {
+    box-shadow: 2px 3px 30px #EEE;
+}
+
+/* End Three Icons Div  */
+
+/* Styling the main container  */
+.services-container {
+    height: 900px;
+}
+/* Styling the big word container */
+.services-header {
+    width: 100%;
+    height: calc(100% / 3);
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+/* Styling the main section  */
+.services-body {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+/* Styling the four icons div  */
+.four-icons {
+    width: 100%;
+    display: grid;
+    grid-template: 150px 150px / 300px 300px;
+    gap: 0px;
+    margin-left: 200px;
+}
+/* Styling each div inside  */
+.four-icons > div {
+    position: relative;
+}
+/* Styling icons  */
+.four-icons > div > i {
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    font-size: 1.5em;
+}
+/* Styling headers  */
+.four-icons > div > h3 {
+    font-weight: 800;
+}
+/* Styling paragraphs  */
+.four-icons > div > p {
+    font-size: 0.8em;
+    margin-top: 30px;
+    width: 230px;
+    line-height: 1.6;
+}
+/* Styling the image container  */
+.services-body > .img-container {
+    width: 360px;
+    height: 340px;
+    margin-right: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* Dark Blue Border  */
+.services-body > .img-container::after {
+    content: "";
+    background-color: var(--darkBlue);
+    width: 80px;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    right: -30px;
+
+}
+/* Styling image  */
+.services-body > .img-container > img {
+    width: 260px;
+    height: 260px;
+}
+
+/* End Services  */
+
+/* Start Portfolio  */
+
+/* Styling the container  */
+.portfolio-container {
+    height: 800px;
+
+}
+/* Styling the header  */
+.portfolio-header {
+    width: 100%;
+    height: calc(100% / 3);
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+/* Moving the paragraph  */
+.portfolio-header > p {
+    transform: translate(-50%, 60%);
+    -webkit-transform: translate(-50%, 60%);
+    -moz-transform: translate(-50%, 60%);
+    -ms-transform: translate(-50%, 60%);
+    -o-transform: translate(-50%, 60%);
+}
+/* Styling the body  */
+.portfolio-body {
+    height: calc(100% - (100% / 3));
+    margin-top: 20px;
+    margin-left: 50px;
+}
+/* Styling each div inside the body  */
+.portfolio-body > div {
+    width: calc((100% / 3) - 100px);
+    height: 200px;
+}
+/* styling the headers of each div  */
+.portfolio-body > div > h3 {
+    font-size: 1em;
+    font-weight: 800;
+    padding-left: 20px;
+}
+/* styling each paragraph inside each div  */
+.portfolio-body > div > p {
+    font-size: 0.75em;
+    padding-left: 20px;
+}
+/* Styling Images  */
+.project > img {
+    width: calc(100% - 40px);
+    height: 200px;
+}
+
+/* End Portfolio  */
+
+/* Start About  */
+
+/* styling the container  */
+.about-container {
+    height: 800px;
+}
+/* styling the header  */
+.about-header {
+    width: 100%;
+    height: calc(100% / 3);
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+/* moving the paragraph  */
+.about-header > p {
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+}
+/* styling the body  */
+.about-body {
+    height: calc(100% - (100% / 3));
+    margin: 0 100px;
+    position: relative;
+}
+/* styling the image  */
+.about-body > div > img {
+    width: 75%;
+    height: 88.2%;
+}
+/* styling the img container  */
+.about-body > .img-container {
+    width: 29%;
+    height: 67.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 200px;
+}
+/* styling the border  */
+.about-body > .img-container::after {
+    content: "";
+    width: 18.75%;
+    height: 75%;
+    background-color: var(--warmGreen);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 6.25%;
+}
+.about-body > .img-container::before {
+    content: "";
+    width: 20%;
+    height: 60px;
+    background-color: var(--warmGreen);
+    z-index: -1;
+    position: absolute;
+    top: calc(75% - 17.64%);
+    right: -13.75%;
+}
+/* styling the paragraphs container */
+.about-body > .next-to-img {
+    align-self: flex-start;
+    margin-top: 100px;
+    padding: 0 150px;
+    width: 800px;
+}
+/* styling the first paragraph  */
+.about-body > .next-to-img > div > .first-p {
+    font-weight: 800;
+    color: var(--darkBlue);
+    line-height: 2;
+}
+/* styling the second paragraph  */
+.about-body > .next-to-img > div > .second-p {
+    font-size: 0.75em;
+    margin-top: 20px;
+}
+/* putting the green line between the paragraphs  */
+.about-body > .next-to-img > .first-p-container::after {
+    content: "___________________________";
+    color: var(--warmGreen);
+
+}
+
+/* End About  */
+
+/* Start Contact  */
+
+/* styling the container  */
+.contact-container {
+    height: 600px;
+    margin-bottom: 100px;
+}
+/* styling the header  */
+.contact-header {
+    width: 100%;
+    height: calc(100% / 3);
+    text-align: center;
+    position: relative;
+    margin-bottom: 180px;
+}
+/* moving the paragraph  */
+.contact-header > p {
+    transform: translate(-50%, 70px);
+    -webkit-transform: translate(-50%, 70px);
+    -moz-transform: translate(-50%, 70px);
+    -ms-transform: translate(-50%, 70px);
+    -o-transform: translate(-50%, 70px);
+}
+/* styling the body  */
+.contact-body {
+    height: calc(100% - (100% / 3));
+    align-self: flex-start;
+    padding: 0 300px;
+}
+/* styling first header  */
+.contact-body > h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--darkBlue);
+}
+/* styling second header  */
+.contact-body > h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--warmGreen);
+    padding: 0 25px;
+}
+/* styling last header  */
+.contact-body > .socials-container > h5 {
+    font-size: 0.8em;
+    padding-left: 60px;
+    color: var(--darkBlue);
+    font-weight: 400;
+    width: 400px;
+}
+/* styling socials container  */
+.socials-container {
+    width: 100%;
+}
+/* styling icons container  */
+.icons-container {
+    justify-content: flex-start;
+}
+/* styling the icons  */
+.icons-container > a > i {
+    color: var(--darkBlue);
+    padding-right: 10px;
+}
+
+/* End Contact  */
+
+/* Start Footer  */
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--darkBlue);
+    color: white;
+}
+.footer-text {
+    padding: 25px;
+    font-size: 0.65em;
+    font-weight: 800;
+    text-align: center;
+}
+.footer-text > span {
+    color: var(--warmGreen);
+}
